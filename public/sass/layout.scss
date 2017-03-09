@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Space+Mono');
+
+* {
+  font-family: 'space mono';
+  box-sizing: border-box;
+  color: white;
+}
+
+// makes html body take up full size of browser window
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+#origin,
+#origin > div {
+  height: 100%;
+  background-color: black;
+}
+
+#homeContainer {
+  min-height: 100%;
+}
+
+#sidebar {
+  display: inline-block;
+  width: 20%;
+  border: .01em solid white;
+  text-align: center;
+  height: 100vh;
+  // this padding value seems to also affect homeContainer, unsure why
+  padding: 2em 0;
+}
+
+#mainContent {
+  display: inline-block;
+  width: 80%;
+  height: 100vh;
+  padding: 0 2em;
+}
