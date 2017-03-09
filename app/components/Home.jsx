@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { exampleUpdate } from '../ducks/rename';
 
-/* Think of this Home component as your main content. If you add new routes,
-their content will replace what you see here (when you navigate to them).  */
+// The Home component might contain your homepage content. Adding new routes to routes.js will cause them to be rendered instead when those urls are accessed.
 
 class Home extends Component {
   constructor(props) {
