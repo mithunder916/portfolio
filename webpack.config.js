@@ -14,6 +14,12 @@ module.exports = {
     extensions: ['', '.js', '.jsx']
   },
   module: {
+    plugins: process.env.NODE_ENV === 'production' ? [
+      new webpack.optimize.DedupePlugin(),
+      new webpack.optimize.OccurrenceOrderPlugin(),
+      new webpack.optimize.UglifyJsPlugin()
+    ] : [],
+    exclude: /(node_modules|bower_components)/,
     loaders: [
       {
         test: /jsx?$/,
