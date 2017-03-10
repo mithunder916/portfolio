@@ -2,6 +2,7 @@
 
 * {
   font-family: 'space mono';
+  font-size: 20px;
   box-sizing: border-box;
   color: white;
 }
@@ -26,10 +27,31 @@ html, body {
   display: inline-block;
   width: 20%;
   border: .01em solid white;
+  box-shadow: .25em .25em .5em #333333;
   text-align: center;
   height: 100vh;
   // this padding value seems to also affect homeContainer, unsure why
   padding: 2em 0;
+}
+
+.tab {
+  // line-height also centers text
+  line-height: 6em;
+  vertical-align: middle;
+  transition-property: background-color, border-radius, color;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
+}
+
+.tab:hover {
+  background-color: #363636;
+  border-radius: 0.7em;
+  // change this:
+  color: cornflowerblue;
+}
+
+.tab:active{
+  background-color: white;
 }
 
 #mainContent {

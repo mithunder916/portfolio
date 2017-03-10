@@ -9,22 +9,35 @@ import Main from './Main';
 class Home extends Component {
   constructor(props) {
     super(props);
+
+    let samples = [
+      ['snare', 'kick', 'hihat', 'tom', 'crash'],
+      ['C', 'D', 'E', 'G', 'A'],
+      ['A', 'B', 'C#', 'E', 'F#']
+    ]
+
+    this.state = {
+      content: '',
+      samples: samples[Math.round(Math.random() * 2)]
+    }
+    this.updateContent = this.updateContent.bind(this);
+  }
+
+  updateContent(newContent){
+    this.setState({content: newContent})
   }
 
   render() {
+    // console.log(this.state)
     return (
       <div id='homeContainer'>
         {/*<header>
           Mithun
         </header>*/}
-        <Sidebar />
-        <Main />
-        {/*<div id='sidebar'>
-          Tabs go here.
-        </div>
-        <div id='mainContent'>
-          Show main content here.
-        </div>*/}
+        <Sidebar
+        updateContent={this.updateContent}
+        samples={this.state.samples}/>
+        <Main content={this.state.content}/>
       </div>
     )
   }
