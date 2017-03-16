@@ -27,10 +27,13 @@ export default class Sidebar extends Component {
 
   render() {
     const { updateContent, samples } = this.props;
-    // console.log(samples)
+    console.log(samples)
     // refactor audio tags - use .map; change about sample to [1]
     return (
       <div id='sidebar'>
+        {/*{samples && samples.map((sample, i) => {
+          <audio id={`${samples[i]}`} type='audio/wav' src={`/samples/${samples[i]}.wav`} />
+        })}*/}
         <audio id={`${samples[0]}`} type='audio/wav' src={`/samples/${samples[0]}.wav`} />
         <audio id={`${samples[1]}`} type='audio/wav' src={`/samples/${samples[1]}.wav`} />
         <audio id={`${samples[2]}`} type='audio/wav' src={`/samples/${samples[2]}.wav`} />
@@ -49,7 +52,7 @@ export default class Sidebar extends Component {
         onClick={() => updateContent('projects')}
         onMouseEnter={(e) => {
           this.toggleText(e);
-          this.playAudio(samples[2])}}
+          this.playAudio(samples[1])}}
         onMouseLeave={(e) => this.toggleText(e)}>
           Projects
         </div>
@@ -57,7 +60,7 @@ export default class Sidebar extends Component {
         onClick={() => updateContent('contact')}
         onMouseEnter={(e) => {
           this.toggleText(e);
-          this.playAudio(samples[3])}}
+          this.playAudio(samples[2])}}
         onMouseLeave={(e) => this.toggleText(e)}>
           Contact
         </div>
@@ -65,7 +68,7 @@ export default class Sidebar extends Component {
         onClick={() => updateContent('music')}
         onMouseEnter={(e) => {
           this.toggleText(e);
-          this.playAudio(samples[4])}}
+          this.playAudio(samples[3])}}
         onMouseLeave={(e) => this.toggleText(e)}>
           Music
         </div>

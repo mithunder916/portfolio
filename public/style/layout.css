@@ -20,7 +20,6 @@ html, body {
 #sidebar {
   display: inline-block;
   width: 20%;
-  border: .01em solid white;
   box-shadow: .25em .25em .5em #333333;
   text-align: center;
   height: 100vh;
@@ -43,6 +42,47 @@ html, body {
 
 #mainContent {
   display: inline-block;
+  position: absolute;
+  vertical-align: top;
   width: 80%;
   height: 100vh;
   padding: 0 2em; }
+
+#aboutContent {
+  text-align: center; }
+  #aboutContent p {
+    margin: 2em; }
+
+.listContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: left; }
+
+.listTitle {
+  padding: 0 0 .5em 0; }
+
+.list li {
+  font-size: 18px;
+  color: grey; }
+
+.list li:hover {
+  color: white; }
+
+#storyTag {
+  color: grey; }
+
+#storyTag:hover {
+  color: gold; }
+
+#story:hover ~ #intro p {
+  color: grey; }
+
+@keyframes slide {
+  0% {
+    left: 20%; }
+  100% {
+    left: 100%; } }
+
+.animateWindow {
+  animation: slide 0.5s ease-in; }

@@ -11,7 +11,7 @@ class Home extends Component {
     super(props);
 
     let samples = [
-      ['snare', 'kick', 'hihat', 'tom', 'crash'],
+      ['kick', 'hihat', 'snare', 'hihat'],
       ['C', 'D', 'E', 'G', 'A'],
       ['A', 'B', 'C#', 'E', 'F#']
     ]
@@ -25,6 +25,8 @@ class Home extends Component {
 
   updateContent(newContent){
     this.setState({content: newContent})
+    document.getElementById('mainContent').className = 'animateWindow';
+    console.log(document.getElementById('mainContent').className)
   }
 
   render() {
