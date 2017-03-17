@@ -26,7 +26,7 @@ class Home extends Component {
   updateContent(newContent){
     this.setState({content: newContent})
     document.getElementById('mainContent').className = 'animateWindow';
-    console.log(document.getElementById('mainContent').className)
+    // console.log(document.getElementById('mainContent').className)
   }
 
   render() {

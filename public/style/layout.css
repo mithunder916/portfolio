@@ -40,12 +40,16 @@ html, body {
 .tab:active {
   background-color: white; }
 
-#mainContent {
+#mainWrapper {
   display: inline-block;
-  position: absolute;
   vertical-align: top;
   width: 80%;
   height: 100vh;
+  overflow: hidden;
+  position: relative; }
+
+#mainContent {
+  position: absolute;
   padding: 0 2em; }
 
 #aboutContent {
@@ -85,4 +89,4 @@ html, body {
     left: 100%; } }
 
 .animateWindow {
-  animation: slide 0.5s ease-in; }
+  animation: slide 0.5s forwards; }
