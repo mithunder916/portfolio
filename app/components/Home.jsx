@@ -26,6 +26,11 @@ class Home extends Component {
   updateContent(newContent){
     this.setState({content: newContent})
     document.getElementById('mainContent').className = 'animateWindow';
+    setTimeout(() => {
+      document.getElementById('mainWrapper').style.width = '0'
+      document.getElementById('mainWrapper').style.height = '0'
+    },
+    500)
     // console.log(document.getElementById('mainContent').className)
   }
 
@@ -40,6 +45,7 @@ class Home extends Component {
         updateContent={this.updateContent}
         samples={this.state.samples}/>
         <Main content={this.state.content}/>
+        <p>Hello</p>
       </div>
     )
   }

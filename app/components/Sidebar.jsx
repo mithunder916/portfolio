@@ -7,7 +7,6 @@ export default class Sidebar extends Component {
   }
 
   playAudio(file){
-    // console.log(document.getElementById(file))
     document.getElementById(file).play()
   }
 

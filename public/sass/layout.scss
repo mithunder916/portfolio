@@ -55,11 +55,18 @@ html, body {
   background-color: white;
 }
 
-#mainWrapper {
+#main {
   display: inline-block;
   vertical-align: top;
   width: 80%;
   height: 100vh;
+}
+
+#mainWrapper {
+  // display: inline-block;
+  // vertical-align: top;
+  // width: 80%;
+  height: 100%;
   overflow: hidden;
   position: relative;
 }

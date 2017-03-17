@@ -40,11 +40,14 @@ html, body {
 .tab:active {
   background-color: white; }
 
-#mainWrapper {
+#main {
   display: inline-block;
   vertical-align: top;
   width: 80%;
-  height: 100vh;
+  height: 100vh; }
+
+#mainWrapper {
+  height: 100%;
   overflow: hidden;
   position: relative; }
 
