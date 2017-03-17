@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Space+Mono');
+@import 'projects.scss';
 
 * {
   font-family: 'space mono';
@@ -21,7 +22,7 @@ html, body {
 
 #homeContainer {
   min-height: 100%;
-  // display: flex;
+  max-width: 400%;
 }
 
 #sidebar {
@@ -48,7 +49,7 @@ html, body {
   background-color: #363636;
   border-radius: 0.7em;
   // change this:
-  color: cornflowerblue;
+  color: gold;
 }
 
 .tab:active{
@@ -62,6 +63,7 @@ html, body {
   height: 100vh;
 }
 
+// wrapper and content classes are used for each window
 .wrapper {
   // display: inline-block;
   // vertical-align: top;
@@ -78,6 +80,11 @@ html, body {
   // width: 80%;
   // height: 100vh;
   padding: 0 2em;
+  text-align: center;
+  p {
+    margin: 2em;
+    text-align: center;
+  }
 }
 
 .hiddenWrapper {
@@ -85,6 +92,7 @@ html, body {
   height: 0;
 }
 
+// main content page exclusive
 #mainContent {
   text-align: center;
   p {

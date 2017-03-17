@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import Projects from './Projects';
+import Contact from './Contact';
+import Music from './Music';
 
 export default class Main extends Component {
   showStory(event){
@@ -7,7 +10,7 @@ export default class Main extends Component {
   }
 
   // selects other text elements in mainContent and toggles text color
-  dimScreen(event){
+  dimText(event){
     let introText = document.getElementById('intro').childNodes,
         listHeaders = document.getElementsByClassName('listTitle'),
         text = [...introText, ...listHeaders];
@@ -65,27 +68,15 @@ export default class Main extends Component {
             <p id='storyTag' onClick={(e) => this.showStory(e)}>What's your story?</p>
             <p id='story'
             style={{display:'none'}}
-            onMouseEnter={(e) => this.dimScreen(e)}
-            onMouseLeave={(e) => this.dimScreen(e)}>
-              Before becoming a software engineer, I taught LSAT Prep and English, both for ESL and elementary/middle school. I spend most of my free making music, whether that's playing the guitar or drums, mixing and recording tracks, or working on music-tech based sideprojects, like Saturn.
+            onMouseEnter={(e) => this.dimText(e)}
+            onMouseLeave={(e) => this.dimText(e)}>
+              Before becoming a software engineer, I taught LSAT Prep and English. I spend most of my free making music, whether that's playing the guitar or drums, mixing and recording tracks, or working on music-tech based sideprojects, like Saturn.
             </p>
           </div>
         </div>
-        <div id='projectsWrapper' className='wrapper hiddenWrapper'>
-          <div id='projectsContent' className='content'>
-            PROJECTS
-          </div>
-        </div>
-        <div id='contactWrapper' className='wrapper hiddenWrapper'>
-          <div id='contactContent' className='content'>
-            CONTACT
-          </div>
-        </div>
-        <div id='musicWrapper' className='wrapper hiddenWrapper'>
-          <div id='musicContent' className='content'>
-            MUSIC
-          </div>
-        </div>
+        <Projects />
+        <Contact />
+        <Music />
       </div>
     )
   }

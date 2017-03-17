@@ -30,19 +30,25 @@ class Home extends Component {
     this.setState({selectedContent: newContent});
     document.getElementById(currentContent + 'Content').className += ' animateWindow';
     setTimeout(() => {
-      document.getElementById(currentContent + 'Wrapper').className += ' hiddenWrapper'
+      let currentWrapper = document.getElementById(currentContent + 'Wrapper');
+      currentWrapper.className += ' hiddenWrapper';
+      // update to include any pages that stretch width of viewport
+      if (currentContent === 'projects') currentWrapper.style.overflow = 'hidden';
       this.resetContentPosition()
     },
     300)
   }
 
-  // slides selected content back in and updates current content
+  // slides selected content in and updates current content
   resetContentPosition(){
     const { selectedContent, currentContent } = this.state;
     document.getElementById(currentContent + 'Content').classList.remove('animateWindow');
 
-    document.getElementById(selectedContent + 'Wrapper').classList.remove('hiddenWrapper');
+    let currentWrapper = document.getElementById(selectedContent + 'Wrapper');
+    currentWrapper.classList.remove('hiddenWrapper');
     document.getElementById(selectedContent + 'Content').className += ' resetWindow';
+
+    if (selectedContent === 'projects') currentWrapper.style.overflow = 'visible';
     this.setState({currentContent: selectedContent});
   }
 
