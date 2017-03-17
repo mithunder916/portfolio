@@ -7,7 +7,6 @@ export default class Sidebar extends Component {
   }
 
   playAudio(file){
-    // console.log(document.getElementById(file))
     document.getElementById(file).play()
   }
 
@@ -41,7 +40,7 @@ export default class Sidebar extends Component {
         <audio id={`${samples[4]}`} type='audio/wav' src={`/samples/${samples[4]}.wav`} />
         Logo
         <div className='tab'
-        onClick={() => updateContent('about')}
+        onClick={() => updateContent('main')}
         onMouseEnter={(e) => {
           this.toggleText(e);
           this.playAudio(samples[0])}}

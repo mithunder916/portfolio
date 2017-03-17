@@ -1,4 +1,30 @@
 @import url("https://fonts.googleapis.com/css?family=Space+Mono");
+#projectsContent {
+  background-color: black;
+  min-height: 100%;
+  display: flex; }
+
+.projectsContainer {
+  width: 115vh;
+  margin: 2em 0; }
+  .projectsContainer img {
+    width: 65%; }
+  .projectsContainer .title {
+    font-size: 28px;
+    margin: 1em 0 .8em 0; }
+  .projectsContainer .description {
+    margin: 0 0.5em; }
+  .projectsContainer .iconRow {
+    margin: 0.5em 0; }
+  .projectsContainer a {
+    margin: 0 .25em; }
+    .projectsContainer a img {
+      border-radius: 5em;
+      width: 4%;
+      transition-duration: 1s; }
+    .projectsContainer a img:hover {
+      background-color: gold; }
+
 * {
   font-family: 'space mono';
   font-size: 20px;
@@ -15,7 +41,8 @@ html, body {
   background-color: black; }
 
 #homeContainer {
-  min-height: 100%; }
+  min-height: 100%;
+  max-width: 400%; }
 
 #sidebar {
   display: inline-block;
@@ -35,22 +62,37 @@ html, body {
 .tab:hover {
   background-color: #363636;
   border-radius: 0.7em;
-  color: cornflowerblue; }
+  color: gold; }
 
 .tab:active {
   background-color: white; }
 
-#mainContent {
+#main {
   display: inline-block;
-  position: absolute;
   vertical-align: top;
   width: 80%;
-  height: 100vh;
-  padding: 0 2em; }
+  height: 100vh; }
 
-#aboutContent {
+.wrapper {
+  height: 100%;
+  overflow: hidden;
+  position: relative; }
+
+.content {
+  position: absolute;
+  padding: 0 2em;
   text-align: center; }
-  #aboutContent p {
+  .content p {
+    margin: 2em;
+    text-align: center; }
+
+.hiddenWrapper {
+  width: 0;
+  height: 0; }
+
+#mainContent {
+  text-align: center; }
+  #mainContent p {
     margin: 2em; }
 
 .listContainer {
@@ -85,4 +127,13 @@ html, body {
     left: 100%; } }
 
 .animateWindow {
-  animation: slide 0.5s ease-in; }
+  animation: slide 0.3s forwards; }
+
+@keyframes slideBack {
+  0% {
+    left: 100%; }
+  100% {
+    left: 0%; } }
+
+.resetWindow {
+  animation: slideBack 0.3s forwards; }

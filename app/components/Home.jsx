@@ -17,28 +17,49 @@ class Home extends Component {
     ]
 
     this.state = {
-      content: '',
+      currentContent: 'main',
+      selectedContent: '',
       samples: samples[Math.round(Math.random() * 2)]
     }
     this.updateContent = this.updateContent.bind(this);
   }
-
+  // updates selected content and slides current content out
   updateContent(newContent){
-    this.setState({content: newContent})
-    document.getElementById('mainContent').className = 'animateWindow';
-    console.log(document.getElementById('mainContent').className)
+    const { selectedContent, currentContent } = this.state;
+    if (selectedContent !== '') document.getElementById(selectedContent + 'Content').classList.remove('resetWindow');
+    this.setState({selectedContent: newContent});
+    document.getElementById(currentContent + 'Content').className += ' animateWindow';
+    setTimeout(() => {
+      let currentWrapper = document.getElementById(currentContent + 'Wrapper');
+      currentWrapper.className += ' hiddenWrapper';
+      // update to include any pages that stretch width of viewport
+      if (currentContent === 'projects') currentWrapper.style.overflow = 'hidden';
+      this.resetContentPosition()
+    },
+    300)
+  }
+
+  // slides selected content in and updates current content
+  resetContentPosition(){
+    const { selectedContent, currentContent } = this.state;
+    document.getElementById(currentContent + 'Content').classList.remove('animateWindow');
+
+    let currentWrapper = document.getElementById(selectedContent + 'Wrapper');
+    currentWrapper.classList.remove('hiddenWrapper');
+    document.getElementById(selectedContent + 'Content').className += ' resetWindow';
+
+    if (selectedContent === 'projects') currentWrapper.style.overflow = 'visible';
+    this.setState({currentContent: selectedContent});
   }
 
   render() {
     // console.log(this.state)
     return (
       <div id='homeContainer'>
-        {/*<header>
-          Mithun
-        </header>*/}
         <Sidebar
         updateContent={this.updateContent}
-        samples={this.state.samples}/>
+        samples={this.state.samples}
+        resetContentPosition={this.resetContentPosition}/>
         <Main content={this.state.content}/>
       </div>
     )
