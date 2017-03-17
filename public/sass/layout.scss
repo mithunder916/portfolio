@@ -62,7 +62,7 @@ html, body {
   height: 100vh;
 }
 
-#mainWrapper {
+.wrapper {
   // display: inline-block;
   // vertical-align: top;
   // width: 80%;
@@ -71,7 +71,7 @@ html, body {
   position: relative;
 }
 
-#mainContent {
+.content {
   // display: inline-block;
   position: absolute;
   // vertical-align: top;
@@ -80,7 +80,12 @@ html, body {
   padding: 0 2em;
 }
 
-#aboutContent {
+.hiddenWrapper {
+  width: 0;
+  height: 0;
+}
+
+#mainContent {
   text-align: center;
   p {
     margin: 2em;
@@ -131,4 +136,18 @@ html, body {
 
 .animateWindow {
   animation: slide 0.5s forwards;
+}
+
+@keyframes slideBack {
+  0% {
+    left: 100%;
+  }
+
+  100% {
+    left: 0%;
+  }
+}
+
+.resetWindow {
+  animation: slideBack 0.5s forwards;
 }

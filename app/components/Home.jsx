@@ -25,27 +25,28 @@ class Home extends Component {
 
   updateContent(newContent){
     this.setState({content: newContent})
-    document.getElementById('mainContent').className = 'animateWindow';
+    document.getElementById('mainContent').className += ' animateWindow';
     setTimeout(() => {
-      document.getElementById('mainWrapper').style.width = '0'
-      document.getElementById('mainWrapper').style.height = '0'
+      document.getElementById('mainWrapper').className += ' hiddenWrapper'
     },
     500)
-    // console.log(document.getElementById('mainContent').className)
+  }
+
+  resetContentPosition(){
+    document.getElementById('mainContent').classList.remove('animateWindow');
+    document.getElementById('mainWrapper').classList.remove('hiddenWrapper');
+    document.getElementById('mainContent').className += ' resetWindow';
   }
 
   render() {
     // console.log(this.state)
     return (
       <div id='homeContainer'>
-        {/*<header>
-          Mithun
-        </header>*/}
         <Sidebar
         updateContent={this.updateContent}
-        samples={this.state.samples}/>
+        samples={this.state.samples}
+        resetContentPosition={this.resetContentPosition}/>
         <Main content={this.state.content}/>
-        <p>Hello</p>
       </div>
     )
   }

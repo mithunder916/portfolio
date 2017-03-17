@@ -48,7 +48,7 @@ export default class Sidebar extends Component {
           Who?
         </div>
         <div className='tab'
-        onClick={() => updateContent('projects')}
+        onClick={() => this.props.resetContentPosition()}
         onMouseEnter={(e) => {
           this.toggleText(e);
           this.playAudio(samples[1])}}

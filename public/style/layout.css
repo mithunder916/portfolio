@@ -46,18 +46,22 @@ html, body {
   width: 80%;
   height: 100vh; }
 
-#mainWrapper {
+.wrapper {
   height: 100%;
   overflow: hidden;
   position: relative; }
 
-#mainContent {
+.content {
   position: absolute;
   padding: 0 2em; }
 
-#aboutContent {
+.hiddenWrapper {
+  width: 0;
+  height: 0; }
+
+#mainContent {
   text-align: center; }
-  #aboutContent p {
+  #mainContent p {
     margin: 2em; }
 
 .listContainer {
@@ -93,3 +97,12 @@ html, body {
 
 .animateWindow {
   animation: slide 0.5s forwards; }
+
+@keyframes slideBack {
+  0% {
+    left: 100%; }
+  100% {
+    left: 0%; } }
+
+.resetWindow {
+  animation: slideBack 0.5s forwards; }
