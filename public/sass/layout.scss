@@ -132,6 +132,38 @@ html, body {
   color: grey;
 }
 
+// images outside of projects page
+.icon {
+  border-radius: 20em;
+  width: 20%;
+  transition-duration: 1s;
+  margin: 0 0.5em;
+}
+
+.linkedIn:hover {
+  background-color: #0077B5;
+}
+
+.stackOverflow:hover {
+  background-color: #F4842B;
+}
+
+.instagram:hover {
+  background-color: #B827A8;
+}
+
+.twitter:hover {
+  background-color: #1DA1F2;
+}
+
+.soundcloud:hover {
+  background-color: #FF5500;
+}
+
+.bandcamp:hover {
+  background-color: #639AA9;
+}
+
 @keyframes slide {
   0% {
     left: 20%;
