@@ -17,25 +17,33 @@ class Home extends Component {
     ]
 
     this.state = {
-      content: '',
+      currentContent: 'main',
+      selectedContent: '',
       samples: samples[Math.round(Math.random() * 2)]
     }
     this.updateContent = this.updateContent.bind(this);
   }
-
+  // updates selected content and slides current content out
   updateContent(newContent){
-    this.setState({content: newContent})
-    document.getElementById('mainContent').className += ' animateWindow';
+    const { selectedContent, currentContent } = this.state;
+    if (selectedContent !== '') document.getElementById(selectedContent + 'Content').classList.remove('resetWindow');
+    this.setState({selectedContent: newContent});
+    document.getElementById(currentContent + 'Content').className += ' animateWindow';
     setTimeout(() => {
-      document.getElementById('mainWrapper').className += ' hiddenWrapper'
+      document.getElementById(currentContent + 'Wrapper').className += ' hiddenWrapper'
+      this.resetContentPosition()
     },
-    500)
+    300)
   }
 
+  // slides selected content back in and updates current content
   resetContentPosition(){
-    document.getElementById('mainContent').classList.remove('animateWindow');
-    document.getElementById('mainWrapper').classList.remove('hiddenWrapper');
-    document.getElementById('mainContent').className += ' resetWindow';
+    const { selectedContent, currentContent } = this.state;
+    document.getElementById(currentContent + 'Content').classList.remove('animateWindow');
+
+    document.getElementById(selectedContent + 'Wrapper').classList.remove('hiddenWrapper');
+    document.getElementById(selectedContent + 'Content').className += ' resetWindow';
+    this.setState({currentContent: selectedContent});
   }
 
   render() {

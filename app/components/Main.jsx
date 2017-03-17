@@ -77,7 +77,7 @@ export default class Main extends Component {
           </div>
         </div>
         <div id='contactWrapper' className='wrapper hiddenWrapper'>
-          <div id='contactContent'>
+          <div id='contactContent' className='content'>
             CONTACT
           </div>
         </div>
