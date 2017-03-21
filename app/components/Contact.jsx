@@ -6,6 +6,10 @@ export default class Contact extends Component {
       <div id='contactWrapper' className='wrapper hiddenWrapper'>
         <div id='contactContent' className='content'>
           <p id='email'>Shoot me a message at: mselvaratnam@gmail.com</p>
+          <a href='/public/images/resume.pdf' download='mithunselvaratnam_resume'
+          id='resumeLink'>
+            <div id='resume'>Download Resume</div>
+          </a>
           <div id='contactIcons'>
             <a href="https://www.linkedin.com/in/mithun-s">
               <img className='icon linkedIn' src="public/images/linkedin.png" />

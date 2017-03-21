@@ -16,7 +16,7 @@ html, body {
 
 #origin,
 #origin > div {
-  height: 100%;
+  height: 100vh;
   background-color: black;
 }
 
@@ -143,11 +143,27 @@ html, body {
 
 // Contact Content
 #email {
-  margin: 5em 0;
+  margin: 6em 0;
+}
+
+#resume {
+  display: inline-block;
+  padding: 1em;
+  border: solid white 1px;
+  transition-duration: .8s;
+}
+
+#resumeLink:hover {
+  #resume {
+    color: black;
+    background-color: white;
+  }
 }
 
 #contactIcons {
-  margin: 10em 0;
+  margin: 6em auto;
+  width: 75%;
+  // text-align: center;
 }
 
 .linkedIn:hover {

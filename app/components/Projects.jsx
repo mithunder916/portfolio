@@ -11,7 +11,7 @@ export default class Projects extends Component {
               <a href="https://github.com/mithunder916/saturn">
                 <img src="public/images/github.png" />
               </a>
-              <a href="https://saturn-synth.herokuapp.com">
+              <a href="https://saturn-synth.com">
                 <img src="public/images/screen.png" />
               </a>
             </div>

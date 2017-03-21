@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
 
-// onClick's should trigger a state change in Home, which will pass updated props to Main
+// onClicks should trigger a state change in Home, which will pass updated props to Main
 export default class Sidebar extends Component {
-  log(input){
-    console.log(input)
-  }
-
   playAudio(file){
     document.getElementById(file).play()
   }
@@ -25,22 +21,20 @@ export default class Sidebar extends Component {
   }
 
   render() {
-    const { updateContent, samples } = this.props;
+    const { updateContent, samples, currentContent } = this.props;
     console.log(samples)
-    // refactor audio tags - use .map; change about sample to [1]
     return (
       <div id='sidebar'>
-        {/*{samples && samples.map((sample, i) => {
-          <audio id={`${samples[i]}`} type='audio/wav' src={`/samples/${samples[i]}.wav`} />
-        })}*/}
-        <audio id={`${samples[0]}`} type='audio/wav' src={`/samples/${samples[0]}.wav`} />
-        <audio id={`${samples[1]}`} type='audio/wav' src={`/samples/${samples[1]}.wav`} />
-        <audio id={`${samples[2]}`} type='audio/wav' src={`/samples/${samples[2]}.wav`} />
-        <audio id={`${samples[3]}`} type='audio/wav' src={`/samples/${samples[3]}.wav`} />
-        <audio id={`${samples[4]}`} type='audio/wav' src={`/samples/${samples[4]}.wav`} />
-        Logo
+        {samples && samples.map((sample, i) => (
+          <audio
+          key={`${samples[i]}`}
+          id={`${samples[i]}`}
+          type='audio/wav'
+          src={`/samples/${samples[i]}.wav`} />
+        ))
+        }
         <div className='tab'
-        onClick={() => updateContent('main')}
+        onClick={currentContent !== 'main' ? () => updateContent('main') : null}
         onMouseEnter={(e) => {
           this.toggleText(e);
           this.playAudio(samples[0])}}
@@ -48,7 +42,7 @@ export default class Sidebar extends Component {
           Who?
         </div>
         <div className='tab'
-        onClick={() => updateContent('projects')}
+        onClick={currentContent !== 'projects' ? () => updateContent('projects') : null}
         onMouseEnter={(e) => {
           this.toggleText(e);
           this.playAudio(samples[1])}}
@@ -56,7 +50,7 @@ export default class Sidebar extends Component {
           Projects
         </div>
         <div className='tab'
-        onClick={() => updateContent('contact')}
+        onClick={currentContent !== 'contact' ? () => updateContent('contact') : null}
         onMouseEnter={(e) => {
           this.toggleText(e);
           this.playAudio(samples[2])}}
@@ -64,7 +58,7 @@ export default class Sidebar extends Component {
           Contact
         </div>
         <div className='tab'
-        onClick={() => updateContent('music')}
+        onClick={currentContent !== 'music' ? () => updateContent('music') : null}
         onMouseEnter={(e) => {
           this.toggleText(e);
           this.playAudio(samples[3])}}

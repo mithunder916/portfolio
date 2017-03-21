@@ -4,16 +4,14 @@ import { exampleUpdate } from '../ducks/rename';
 import Sidebar from './Sidebar';
 import Main from './Main';
 
-// The Home component might contain your homepage content. Adding new routes to routes.js will cause them to be rendered instead when those urls are accessed.
-
 class Home extends Component {
   constructor(props) {
     super(props);
 
     let samples = [
-      ['kick', 'hihat', 'snare', 'hihat'],
-      ['C', 'D', 'E', 'G', 'A'],
-      ['A', 'B', 'C#', 'E', 'F#']
+      ['kick', 'hihat', 'snare', 'hihat2'],
+      ['C', 'D', 'E', 'G'],
+      ['A', 'B', 'C#', 'E']
     ]
 
     this.state = {
@@ -58,9 +56,10 @@ class Home extends Component {
       <div id='homeContainer'>
         <Sidebar
         updateContent={this.updateContent}
+        resetContentPosition={this.resetContentPosition}
         samples={this.state.samples}
-        resetContentPosition={this.resetContentPosition}/>
-        <Main content={this.state.content}/>
+        currentContent={this.state.currentContent}/>
+        <Main content={this.state.currentContent}/>
       </div>
     )
   }
