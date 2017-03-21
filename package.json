@@ -7,6 +7,7 @@
     "test": "mocha ./tests/**/*.js --compilers js:babel-register",
     "start": "webpack -w --progress & node server.js",
     "dev": "webpack -w --progress & nodemon server.js",
+    "build": "webpack -w",
     "build-css": "node-sass -w public/sass/layout.scss -o public/style"
   },
   "author": "Mithun",
