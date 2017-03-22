@@ -42,12 +42,13 @@ html, body {
   transition-property: background-color, border-radius, color;
   transition-duration: 0.5s;
   transition-timing-function: ease-out;
+  position: relative;
+  // left: 0%;
 }
 
 .tab:hover {
   background-color: #363636;
   border-radius: 0.7em;
-  // change this:
   color: gold;
 }
 
@@ -60,14 +61,10 @@ html, body {
   vertical-align: top;
   width: 80%;
   height: 100vh;
-  // max-height: 100vh;
 }
 
 // wrapper and content classes are used for each window
 .wrapper {
-  // display: inline-block;
-  // vertical-align: top;
-  // width: 80%;
   height: 100%;
   max-height: 100vh;
   overflow: hidden;
@@ -75,11 +72,7 @@ html, body {
 }
 
 .content {
-  // display: inline-block;
   position: absolute;
-  // vertical-align: top;
-  // width: 80%;
-  // height: 100vh;
   padding: 0 2em;
   text-align: center;
   p {
@@ -242,4 +235,32 @@ html, body {
 
 .resetWindow {
   animation: slideBack 0.3s forwards;
+}
+
+@keyframes slideTab {
+  0% {
+    left: 0%;
+  }
+
+  100% {
+    left: -100%;
+  }
+}
+
+.animateTab {
+  animation: slideTab 0.3s forwards;
+}
+
+@keyframes slideTabBack {
+  0% {
+    left: -100%;
+  }
+
+  100% {
+    left: 0%;
+  }
+}
+
+.resetTab {
+  animation: slideTabBack 0.3s forwards;
 }

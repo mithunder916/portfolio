@@ -24,7 +24,7 @@ export default class Sidebar extends Component {
     const { updateContent, samples, currentContent } = this.props;
     console.log(samples)
     return (
-      <div id='sidebar'>
+      <div id='sidebar' className='wrapper'>
         {samples && samples.map((sample, i) => (
           <audio
           key={`${samples[i]}`}
@@ -33,37 +33,37 @@ export default class Sidebar extends Component {
           src={`/samples/${samples[i]}.wav`} />
         ))
         }
-        <div className='tab'
-        onClick={currentContent !== 'main' ? () => updateContent('main') : null}
-        onMouseEnter={(e) => {
-          this.toggleText(e);
-          this.playAudio(samples[0])}}
-        onMouseLeave={(e) => this.toggleText(e)}>
-          Who?
+        <div id='mainTab' className='tab'
+          onClick={currentContent !== 'main' ? () => updateContent('main') : null}
+          onMouseEnter={(e) => {
+            this.toggleText(e);
+            this.playAudio(samples[0])}}
+          onMouseLeave={(e) => this.toggleText(e)}>
+            Who?
         </div>
-        <div className='tab'
-        onClick={currentContent !== 'projects' ? () => updateContent('projects') : null}
-        onMouseEnter={(e) => {
-          this.toggleText(e);
-          this.playAudio(samples[1])}}
-        onMouseLeave={(e) => this.toggleText(e)}>
-          Projects
+        <div id='projectsTab' className='tab'
+          onClick={currentContent !== 'projects' ? () => updateContent('projects') : null}
+          onMouseEnter={(e) => {
+            this.toggleText(e);
+            this.playAudio(samples[1])}}
+          onMouseLeave={(e) => this.toggleText(e)}>
+            Projects
         </div>
-        <div className='tab'
-        onClick={currentContent !== 'contact' ? () => updateContent('contact') : null}
-        onMouseEnter={(e) => {
-          this.toggleText(e);
-          this.playAudio(samples[2])}}
-        onMouseLeave={(e) => this.toggleText(e)}>
-          Contact
+        <div id='contactTab' className='tab'
+          onClick={currentContent !== 'contact' ? () => updateContent('contact') : null}
+          onMouseEnter={(e) => {
+            this.toggleText(e);
+            this.playAudio(samples[2])}}
+          onMouseLeave={(e) => this.toggleText(e)}>
+            Contact
         </div>
-        <div className='tab'
-        onClick={currentContent !== 'music' ? () => updateContent('music') : null}
-        onMouseEnter={(e) => {
-          this.toggleText(e);
-          this.playAudio(samples[3])}}
-        onMouseLeave={(e) => this.toggleText(e)}>
-          Music
+        <div id='musicTab' className='tab'
+          onClick={currentContent !== 'music' ? () => updateContent('music') : null}
+          onMouseEnter={(e) => {
+            this.toggleText(e);
+            this.playAudio(samples[3])}}
+          onMouseLeave={(e) => this.toggleText(e)}>
+            Music
         </div>
       </div>
     )

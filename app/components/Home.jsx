@@ -24,6 +24,7 @@ class Home extends Component {
   // updates selected content and slides current content out
   updateContent(newContent){
     const { selectedContent, currentContent } = this.state;
+
     if (selectedContent !== '') document.getElementById(selectedContent + 'Content').classList.remove('resetWindow');
     this.setState({selectedContent: newContent});
     document.getElementById(currentContent + 'Content').className += ' animateWindow';

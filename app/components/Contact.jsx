@@ -5,7 +5,7 @@ export default class Contact extends Component {
     return (
       <div id='contactWrapper' className='wrapper hiddenWrapper'>
         <div id='contactContent' className='content'>
-          <p id='email'>Shoot me a message at: mselvaratnam@gmail.com</p>
+          <p id='email'>Shoot me a message at: <a href='mailto:mselvaratnam@gmail.com'>mselvaratnam@gmail.com</a></p>
           <a href='/public/images/resume.pdf' download='mithunselvaratnam_resume'
           id='resumeLink'>
             <div id='resume'>Download Resume</div>

@@ -29314,6 +29314,7 @@
 	          selectedContent = _state.selectedContent,
 	          currentContent = _state.currentContent;
 	
+	
 	      if (selectedContent !== '') document.getElementById(selectedContent + 'Content').classList.remove('resetWindow');
 	      this.setState({ selectedContent: newContent });
 	      document.getElementById(currentContent + 'Content').className += ' animateWindow';
@@ -29457,7 +29458,7 @@
 	      console.log(samples);
 	      return _react2.default.createElement(
 	        'div',
-	        { id: 'sidebar' },
+	        { id: 'sidebar', className: 'wrapper' },
 	        samples && samples.map(function (sample, i) {
 	          return _react2.default.createElement('audio', {
 	            key: '' + samples[i],
@@ -29467,7 +29468,7 @@
 	        }),
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'tab',
+	          { id: 'mainTab', className: 'tab',
 	            onClick: currentContent !== 'main' ? function () {
 	              return updateContent('main');
 	            } : null,
@@ -29482,7 +29483,7 @@
 	        ),
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'tab',
+	          { id: 'projectsTab', className: 'tab',
 	            onClick: currentContent !== 'projects' ? function () {
 	              return updateContent('projects');
 	            } : null,
@@ -29497,7 +29498,7 @@
 	        ),
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'tab',
+	          { id: 'contactTab', className: 'tab',
 	            onClick: currentContent !== 'contact' ? function () {
 	              return updateContent('contact');
 	            } : null,
@@ -29512,7 +29513,7 @@
 	        ),
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'tab',
+	          { id: 'musicTab', className: 'tab',
 	            onClick: currentContent !== 'music' ? function () {
 	              return updateContent('music');
 	            } : null,
@@ -29841,14 +29842,18 @@
 	              'div',
 	              { className: 'iconRow' },
 	              _react2.default.createElement(
-	                'a',
-	                { href: 'https://github.com/mithunder916/saturn' },
-	                _react2.default.createElement('img', { src: 'public/images/github.png' })
-	              ),
-	              _react2.default.createElement(
-	                'a',
-	                { href: 'https://saturn-synth.com' },
-	                _react2.default.createElement('img', { src: 'public/images/screen.png' })
+	                'div',
+	                { className: 'miniIcons' },
+	                _react2.default.createElement(
+	                  'a',
+	                  { href: 'https://github.com/mithunder916/saturn' },
+	                  _react2.default.createElement('img', { src: 'public/images/github.png' })
+	                ),
+	                _react2.default.createElement(
+	                  'a',
+	                  { href: 'https://saturn-synth.com' },
+	                  _react2.default.createElement('img', { src: 'public/images/screen.png' })
+	                )
 	              )
 	            ),
 	            _react2.default.createElement(
@@ -29875,19 +29880,23 @@
 	              'div',
 	              { className: 'iconRow' },
 	              _react2.default.createElement(
-	                'a',
-	                { href: 'https://github.com/jpfiorilla/MusoLingo' },
-	                _react2.default.createElement('img', { src: 'public/images/github.png' })
-	              ),
-	              _react2.default.createElement(
-	                'a',
-	                { href: 'https://eighty-eight-keys.herokuapp.com' },
-	                _react2.default.createElement('img', { src: 'public/images/screen.png' })
-	              ),
-	              _react2.default.createElement(
-	                'a',
-	                { href: 'https://youtu.be/3FlpPu1twQE' },
-	                _react2.default.createElement('img', { src: 'public/images/video2.png' })
+	                'div',
+	                { className: 'miniIcons' },
+	                _react2.default.createElement(
+	                  'a',
+	                  { href: 'https://github.com/jpfiorilla/MusoLingo' },
+	                  _react2.default.createElement('img', { src: 'public/images/github.png' })
+	                ),
+	                _react2.default.createElement(
+	                  'a',
+	                  { href: 'https://eighty-eight-keys.herokuapp.com' },
+	                  _react2.default.createElement('img', { src: 'public/images/screen.png' })
+	                ),
+	                _react2.default.createElement(
+	                  'a',
+	                  { href: 'https://youtu.be/3FlpPu1twQE' },
+	                  _react2.default.createElement('img', { src: 'public/images/video2.png' })
+	                )
 	              )
 	            ),
 	            _react2.default.createElement(
@@ -29914,19 +29923,23 @@
 	              'div',
 	              { className: 'iconRow' },
 	              _react2.default.createElement(
-	                'a',
-	                { href: 'https://github.com/mithunder916/browser_DAW' },
-	                _react2.default.createElement('img', { src: 'public/images/github.png' })
-	              ),
-	              _react2.default.createElement(
-	                'a',
-	                { href: 'https://browser-daw.herokuapp.com' },
-	                _react2.default.createElement('img', { src: 'public/images/screen.png' })
-	              ),
-	              _react2.default.createElement(
-	                'a',
-	                { href: 'https://youtu.be/TQIneYEEW_g' },
-	                _react2.default.createElement('img', { src: 'public/images/video2.png' })
+	                'div',
+	                { className: 'miniIcons' },
+	                _react2.default.createElement(
+	                  'a',
+	                  { href: 'https://github.com/mithunder916/browser_DAW' },
+	                  _react2.default.createElement('img', { src: 'public/images/github.png' })
+	                ),
+	                _react2.default.createElement(
+	                  'a',
+	                  { href: 'https://browser-daw.herokuapp.com' },
+	                  _react2.default.createElement('img', { src: 'public/images/screen.png' })
+	                ),
+	                _react2.default.createElement(
+	                  'a',
+	                  { href: 'https://youtu.be/TQIneYEEW_g' },
+	                  _react2.default.createElement('img', { src: 'public/images/video2.png' })
+	                )
 	              )
 	            ),
 	            _react2.default.createElement(
@@ -29953,14 +29966,18 @@
 	              'div',
 	              { className: 'iconRow' },
 	              _react2.default.createElement(
-	                'a',
-	                { href: 'https://github.com/pseuyi/too_many_tabs_keys' },
-	                _react2.default.createElement('img', { src: 'public/images/github.png' })
-	              ),
-	              _react2.default.createElement(
-	                'a',
-	                { href: 'https://browser-daw.herokuapp.com' },
-	                _react2.default.createElement('img', { src: 'public/images/screen.png' })
+	                'div',
+	                { className: 'miniIcons' },
+	                _react2.default.createElement(
+	                  'a',
+	                  { href: 'https://github.com/pseuyi/too_many_tabs_keys' },
+	                  _react2.default.createElement('img', { src: 'public/images/github.png' })
+	                ),
+	                _react2.default.createElement(
+	                  'a',
+	                  { href: 'https://browser-daw.herokuapp.com' },
+	                  _react2.default.createElement('img', { src: 'public/images/screen.png' })
+	                )
 	              )
 	            ),
 	            _react2.default.createElement(
@@ -29987,14 +30004,18 @@
 	              'div',
 	              { className: 'iconRow' },
 	              _react2.default.createElement(
-	                'a',
-	                { href: 'https://github.com/mithunder916/web_audio_api_techtalk' },
-	                _react2.default.createElement('img', { src: 'public/images/github.png' })
-	              ),
-	              _react2.default.createElement(
-	                'a',
-	                { href: 'https://youtu.be/p0Fv9CX1FGc' },
-	                _react2.default.createElement('img', { src: 'public/images/video2.png' })
+	                'div',
+	                { className: 'miniIcons' },
+	                _react2.default.createElement(
+	                  'a',
+	                  { href: 'https://github.com/mithunder916/web_audio_api_techtalk' },
+	                  _react2.default.createElement('img', { src: 'public/images/github.png' })
+	                ),
+	                _react2.default.createElement(
+	                  'a',
+	                  { href: 'https://youtu.be/p0Fv9CX1FGc' },
+	                  _react2.default.createElement('img', { src: 'public/images/video2.png' })
+	                )
 	              )
 	            ),
 	            _react2.default.createElement(
@@ -30063,7 +30084,12 @@
 	          _react2.default.createElement(
 	            'p',
 	            { id: 'email' },
-	            'Shoot me a message at: mselvaratnam@gmail.com'
+	            'Shoot me a message at: ',
+	            _react2.default.createElement(
+	              'a',
+	              { href: 'mailto:mselvaratnam@gmail.com' },
+	              'mselvaratnam@gmail.com'
+	            )
 	          ),
 	          _react2.default.createElement(
 	            'a',

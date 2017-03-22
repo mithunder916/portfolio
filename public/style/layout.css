@@ -18,11 +18,17 @@
     margin: 2em 0 0 0; }
   .projectsContainer .iconRow {
     margin: 0.5em 0; }
+  .projectsContainer .miniIcons {
+    display: inline-block;
+    background-color: #1F1E1C;
+    border-radius: 3em;
+    width: 18%;
+    padding: .2em .3em 0 .3em; }
   .projectsContainer a {
     margin: 0 .25em; }
     .projectsContainer a img {
       border-radius: 5em;
-      width: 4%;
+      width: 25%;
       transition-duration: 1s;
       margin-top: 0; }
     .projectsContainer a img:hover {
@@ -59,7 +65,8 @@ html, body {
   vertical-align: middle;
   transition-property: background-color, border-radius, color;
   transition-duration: 0.5s;
-  transition-timing-function: ease-out; }
+  transition-timing-function: ease-out;
+  position: relative; }
 
 .tab:hover {
   background-color: #363636;
@@ -197,3 +204,21 @@ html, body {
 
 .resetWindow {
   animation: slideBack 0.3s forwards; }
+
+@keyframes slideTab {
+  0% {
+    left: 0%; }
+  100% {
+    left: -100%; } }
+
+.animateTab {
+  animation: slideTab 0.3s forwards; }
+
+@keyframes slideTabBack {
+  0% {
+    left: -100%; }
+  100% {
+    left: 0%; } }
+
+.resetTab {
+  animation: slideTabBack 0.3s forwards; }
