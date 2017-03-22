@@ -29317,9 +29317,14 @@
 	
 	      if (selectedContent !== '') {
 	        document.getElementById(selectedContent + 'Content').classList.remove('resetWindow');
-	      } // else remove animateTab from mainTab
+	      }
+	      document.getElementById(currentContent + 'Symbol').classList.remove('activeSymbol');
+	      // slides out current symbol
+	      document.getElementById(currentContent + 'Symbol').className += ' hiddenSymbol';
 	      this.setState({ selectedContent: newContent });
+	      // slides out current content
 	      document.getElementById(currentContent + 'Content').className += ' animateWindow';
+	
 	      var currentTab = document.getElementById(currentContent + 'Tab');
 	      // slides old tab back in
 	      currentTab.className += ' resetTab';
@@ -29352,13 +29357,18 @@
 	      selectedTab.className += ' animateTab';
 	      selectedTab.classList.remove('resetTab');
 	
+	      // setTimeout(() => {
+	      // document.getElementById(selectedContent + 'Symbol').style.visibility = 'visible';
+	      document.getElementById(selectedContent + 'Symbol').className += ' activeSymbol';
+	      document.getElementById(selectedContent + 'Symbol').classList.remove('hiddenSymbol');
+	      // }, 300);
+	
 	      if (selectedContent === 'projects') currentWrapper.style.overflow = 'visible';
 	      this.setState({ currentContent: selectedContent });
 	    }
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      // console.log(this.state)
 	      return _react2.default.createElement(
 	        'div',
 	        { id: 'homeContainer' },
@@ -29478,63 +29488,101 @@
 	        }),
 	        _react2.default.createElement(
 	          'div',
-	          { id: 'mainTab', className: 'tab defaultTab',
-	            onClick: currentContent !== 'main' ? function () {
-	              return updateContent('main');
-	            } : null,
-	            onMouseEnter: function onMouseEnter(e) {
-	              _this2.toggleText(e);
-	              _this2.playAudio(samples[0]);
-	            },
-	            onMouseLeave: function onMouseLeave(e) {
-	              return _this2.toggleText(e);
-	            } },
-	          'Who?'
+	          { className: 'tabContainer' },
+	          _react2.default.createElement(
+	            'div',
+	            { id: 'mainTab', className: 'tab defaultTab',
+	              onClick: currentContent !== 'main' ? function () {
+	                return updateContent('main');
+	              } : null,
+	              onMouseEnter: function onMouseEnter(e) {
+	                _this2.toggleText(e);
+	                _this2.playAudio(samples[0]);
+	              },
+	              onMouseLeave: function onMouseLeave(e) {
+	                return _this2.toggleText(e);
+	              } },
+	            'Who?'
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'symbol defaultSymbol',
+	              id: 'mainSymbol',
+	              style: { visibility: 'visible' } },
+	            _react2.default.createElement('img', { className: 'sideIcon', src: 'public/images/youngmith.png' })
+	          )
 	        ),
 	        _react2.default.createElement(
 	          'div',
-	          { id: 'projectsTab', className: 'tab',
-	            onClick: currentContent !== 'projects' ? function () {
-	              return updateContent('projects');
-	            } : null,
-	            onMouseEnter: function onMouseEnter(e) {
-	              _this2.toggleText(e);
-	              _this2.playAudio(samples[1]);
-	            },
-	            onMouseLeave: function onMouseLeave(e) {
-	              return _this2.toggleText(e);
-	            } },
-	          'Projects'
+	          { className: 'tabContainer' },
+	          _react2.default.createElement(
+	            'div',
+	            { id: 'projectsTab', className: 'tab',
+	              onClick: currentContent !== 'projects' ? function () {
+	                return updateContent('projects');
+	              } : null,
+	              onMouseEnter: function onMouseEnter(e) {
+	                _this2.toggleText(e);
+	                _this2.playAudio(samples[1]);
+	              },
+	              onMouseLeave: function onMouseLeave(e) {
+	                return _this2.toggleText(e);
+	              } },
+	            'Projects'
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'symbol', id: 'projectsSymbol' },
+	            _react2.default.createElement('img', { className: 'sideIcon', src: 'public/images/projects.png' })
+	          )
 	        ),
 	        _react2.default.createElement(
 	          'div',
-	          { id: 'contactTab', className: 'tab',
-	            onClick: currentContent !== 'contact' ? function () {
-	              return updateContent('contact');
-	            } : null,
-	            onMouseEnter: function onMouseEnter(e) {
-	              _this2.toggleText(e);
-	              _this2.playAudio(samples[2]);
-	            },
-	            onMouseLeave: function onMouseLeave(e) {
-	              return _this2.toggleText(e);
-	            } },
-	          'Contact'
+	          { className: 'tabContainer' },
+	          _react2.default.createElement(
+	            'div',
+	            { id: 'contactTab', className: 'tab',
+	              onClick: currentContent !== 'contact' ? function () {
+	                return updateContent('contact');
+	              } : null,
+	              onMouseEnter: function onMouseEnter(e) {
+	                _this2.toggleText(e);
+	                _this2.playAudio(samples[2]);
+	              },
+	              onMouseLeave: function onMouseLeave(e) {
+	                return _this2.toggleText(e);
+	              } },
+	            'Contact'
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'symbol', id: 'contactSymbol' },
+	            _react2.default.createElement('img', { className: 'sideIcon', src: 'public/images/contact.svg' })
+	          )
 	        ),
 	        _react2.default.createElement(
 	          'div',
-	          { id: 'musicTab', className: 'tab',
-	            onClick: currentContent !== 'music' ? function () {
-	              return updateContent('music');
-	            } : null,
-	            onMouseEnter: function onMouseEnter(e) {
-	              _this2.toggleText(e);
-	              _this2.playAudio(samples[3]);
-	            },
-	            onMouseLeave: function onMouseLeave(e) {
-	              return _this2.toggleText(e);
-	            } },
-	          'Music'
+	          { className: 'tabContainer' },
+	          _react2.default.createElement(
+	            'div',
+	            { id: 'musicTab', className: 'tab',
+	              onClick: currentContent !== 'music' ? function () {
+	                return updateContent('music');
+	              } : null,
+	              onMouseEnter: function onMouseEnter(e) {
+	                _this2.toggleText(e);
+	                _this2.playAudio(samples[3]);
+	              },
+	              onMouseLeave: function onMouseLeave(e) {
+	                return _this2.toggleText(e);
+	              } },
+	            'Music'
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'symbol', id: 'musicSymbol' },
+	            _react2.default.createElement('img', { className: 'sideIcon', src: 'public/images/record2.png' })
+	          )
 	        )
 	      );
 	    }

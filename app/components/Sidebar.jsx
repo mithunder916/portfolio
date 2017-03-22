@@ -33,37 +33,59 @@ export default class Sidebar extends Component {
           src={`/samples/${samples[i]}.wav`} />
         ))
         }
-        <div id='mainTab' className='tab defaultTab'
-          onClick={currentContent !== 'main' ? () => updateContent('main') : null}
-          onMouseEnter={(e) => {
-            this.toggleText(e);
-            this.playAudio(samples[0])}}
-          onMouseLeave={(e) => this.toggleText(e)}>
-            Who?
+        <div className='tabContainer'>
+          <div id='mainTab' className='tab defaultTab'
+            onClick={currentContent !== 'main' ? () => updateContent('main') : null}
+            onMouseEnter={(e) => {
+              this.toggleText(e);
+              this.playAudio(samples[0])}}
+            onMouseLeave={(e) => this.toggleText(e)}>
+              Who?
+          </div>
+          <div className='symbol defaultSymbol'
+            id='mainSymbol'
+            style={{visibility: 'visible'}}>
+            <img className='sideIcon' src='public/images/youngmith.png' />
+          </div>
         </div>
-        <div id='projectsTab' className='tab'
-          onClick={currentContent !== 'projects' ? () => updateContent('projects') : null}
-          onMouseEnter={(e) => {
-            this.toggleText(e);
-            this.playAudio(samples[1])}}
-          onMouseLeave={(e) => this.toggleText(e)}>
-            Projects
+        <div className='tabContainer'>
+          <div id='projectsTab' className='tab'
+            onClick={currentContent !== 'projects' ? () => updateContent('projects') : null}
+            onMouseEnter={(e) => {
+              this.toggleText(e);
+              this.playAudio(samples[1])}}
+            onMouseLeave={(e) => this.toggleText(e)}>
+              Projects
+          </div>
+          <div className='symbol' id='projectsSymbol'>
+            <img className='sideIcon' src='public/images/projects.png' />
+          </div>
         </div>
-        <div id='contactTab' className='tab'
-          onClick={currentContent !== 'contact' ? () => updateContent('contact') : null}
-          onMouseEnter={(e) => {
-            this.toggleText(e);
-            this.playAudio(samples[2])}}
-          onMouseLeave={(e) => this.toggleText(e)}>
-            Contact
+        <div className='tabContainer'>
+          <div id='contactTab' className='tab'
+            onClick={currentContent !== 'contact' ? () => updateContent('contact') : null}
+            onMouseEnter={(e) => {
+              this.toggleText(e);
+              this.playAudio(samples[2])}}
+            onMouseLeave={(e) => this.toggleText(e)}>
+              Contact
+          </div>
+          <div className='symbol' id='contactSymbol'>
+            <img className='sideIcon' src='public/images/contact.svg' />
+          </div>
         </div>
-        <div id='musicTab' className='tab'
-          onClick={currentContent !== 'music' ? () => updateContent('music') : null}
-          onMouseEnter={(e) => {
-            this.toggleText(e);
-            this.playAudio(samples[3])}}
-          onMouseLeave={(e) => this.toggleText(e)}>
-            Music
+        <div className='tabContainer'>
+          <div id='musicTab' className='tab'
+            onClick={currentContent !== 'music' ? () => updateContent('music') : null}
+            onMouseEnter={(e) => {
+              this.toggleText(e);
+              this.playAudio(samples[3])}}
+            onMouseLeave={(e) => this.toggleText(e)}>
+              Music
+          </div>
+          <div className='symbol' id='musicSymbol'>
+            <img className='sideIcon' src='public/images/record2.png' />
+          </div>
         </div>
       </div>
     )

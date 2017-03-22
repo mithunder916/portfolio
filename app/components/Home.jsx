@@ -27,9 +27,14 @@ class Home extends Component {
 
     if (selectedContent !== '') {
       document.getElementById(selectedContent + 'Content').classList.remove('resetWindow');
-    } // else remove animateTab from mainTab
+    }
+    document.getElementById(currentContent + 'Symbol').classList.remove('activeSymbol')
+    // slides out current symbol
+    document.getElementById(currentContent + 'Symbol').className += ' hiddenSymbol'
     this.setState({selectedContent: newContent});
+    // slides out current content
     document.getElementById(currentContent + 'Content').className += ' animateWindow';
+
     let currentTab = document.getElementById(currentContent + 'Tab');
     // slides old tab back in
     currentTab.className += ' resetTab';
@@ -57,12 +62,17 @@ class Home extends Component {
     selectedTab.className += ' animateTab';
     selectedTab.classList.remove('resetTab');
 
+    // setTimeout(() => {
+      // document.getElementById(selectedContent + 'Symbol').style.visibility = 'visible';
+      document.getElementById(selectedContent + 'Symbol').className += ' activeSymbol';
+      document.getElementById(selectedContent + 'Symbol').classList.remove('hiddenSymbol')
+    // }, 300);
+
     if (selectedContent === 'projects') currentWrapper.style.overflow = 'visible';
     this.setState({currentContent: selectedContent});
   }
 
   render() {
-    // console.log(this.state)
     return (
       <div id='homeContainer'>
         <Sidebar
