@@ -24271,11 +24271,7 @@
 	
 	var _reactRouter = __webpack_require__(219);
 	
-	var _App = __webpack_require__(272);
-	
-	var _App2 = _interopRequireDefault(_App);
-	
-	var _Home = __webpack_require__(273);
+	var _Home = __webpack_require__(272);
 	
 	var _Home2 = _interopRequireDefault(_Home);
 	
@@ -24285,12 +24281,7 @@
 	  return _react2.default.createElement(
 	    _reactRouter.Router,
 	    { history: _reactRouter.browserHistory },
-	    _react2.default.createElement(
-	      _reactRouter.Route,
-	      { path: '/', component: _App2.default },
-	      _react2.default.createElement(_reactRouter.IndexRedirect, { to: '/home' }),
-	      _react2.default.createElement(_reactRouter.Route, { path: '/home', component: _Home2.default })
-	    )
+	    _react2.default.createElement(_reactRouter.Route, { path: '/', component: _Home2.default })
 	  );
 	};
 
@@ -29227,37 +29218,6 @@
 	  value: true
 	});
 	
-	var _react = __webpack_require__(1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	/* The 'App' component is the parent of all other components in React-Router. */
-	
-	var App = function App(props) {
-	  var children = props.children;
-	
-	
-	  return _react2.default.createElement(
-	    'div',
-	    null,
-	    children
-	  );
-	};
-	
-	exports.default = App;
-
-/***/ },
-/* 273 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
 	var _react = __webpack_require__(1);
@@ -29268,11 +29228,11 @@
 	
 	var _rename = __webpack_require__(210);
 	
-	var _Sidebar = __webpack_require__(274);
+	var _Sidebar = __webpack_require__(273);
 	
 	var _Sidebar2 = _interopRequireDefault(_Sidebar);
 	
-	var _Main = __webpack_require__(275);
+	var _Main = __webpack_require__(274);
 	
 	var _Main2 = _interopRequireDefault(_Main);
 	
@@ -29403,7 +29363,7 @@
 	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(Home);
 
 /***/ },
-/* 274 */
+/* 273 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29594,7 +29554,7 @@
 	exports.default = Sidebar;
 
 /***/ },
-/* 275 */
+/* 274 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29609,15 +29569,15 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _Projects = __webpack_require__(276);
+	var _Projects = __webpack_require__(275);
 	
 	var _Projects2 = _interopRequireDefault(_Projects);
 	
-	var _Contact = __webpack_require__(277);
+	var _Contact = __webpack_require__(276);
 	
 	var _Contact2 = _interopRequireDefault(_Contact);
 	
-	var _Music = __webpack_require__(278);
+	var _Music = __webpack_require__(277);
 	
 	var _Music2 = _interopRequireDefault(_Music);
 	
@@ -29851,7 +29811,7 @@
 	exports.default = Main;
 
 /***/ },
-/* 276 */
+/* 275 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30098,7 +30058,7 @@
 	exports.default = Projects;
 
 /***/ },
-/* 277 */
+/* 276 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30194,7 +30154,7 @@
 	exports.default = Contact;
 
 /***/ },
-/* 278 */
+/* 277 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
