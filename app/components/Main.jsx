@@ -53,6 +53,7 @@ export default class Main extends Component {
                 <li>Express</li>
                 <li>SQL/Postgres</li>
                 <li>Sequelize</li>
+                <li>Ruby on Rails</li>
               </ul>
               <ul className='list'>
                 <div className='listTitle'>Other</div>

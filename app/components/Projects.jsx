@@ -54,7 +54,7 @@ export default class Projects extends Component {
             <p className='tools'>Built with: Tone.js, jQuery, Nexus UI, Node</p>
           </div>
           <div className='projectsContainer'>
-            <img src="" />
+            <img src="public/images/too_many_tabs.png" />
             <div className='iconRow'>
               <a href="https://github.com/pseuyi/too_many_tabs_keys">
                 <img src="public/images/github.png" />

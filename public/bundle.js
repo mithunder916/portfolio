@@ -29706,6 +29706,11 @@
 	                  'li',
 	                  null,
 	                  'Sequelize'
+	                ),
+	                _react2.default.createElement(
+	                  'li',
+	                  null,
+	                  'Ruby on Rails'
 	                )
 	              ),
 	              _react2.default.createElement(
@@ -29943,7 +29948,7 @@
 	          _react2.default.createElement(
 	            'div',
 	            { className: 'projectsContainer' },
-	            _react2.default.createElement('img', { src: '' }),
+	            _react2.default.createElement('img', { src: 'public/images/too_many_tabs.png' }),
 	            _react2.default.createElement(
 	              'div',
 	              { className: 'iconRow' },
