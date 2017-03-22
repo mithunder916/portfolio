@@ -33,7 +33,7 @@ export default class Sidebar extends Component {
           src={`/samples/${samples[i]}.wav`} />
         ))
         }
-        <div id='mainTab' className='tab'
+        <div id='mainTab' className='tab defaultTab'
           onClick={currentContent !== 'main' ? () => updateContent('main') : null}
           onMouseEnter={(e) => {
             this.toggleText(e);

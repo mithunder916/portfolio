@@ -251,6 +251,10 @@ html, body {
   animation: slideTab 0.3s forwards;
 }
 
+.defaultTab {
+  left: -100%;
+}
+
 @keyframes slideTabBack {
   0% {
     left: -100%;

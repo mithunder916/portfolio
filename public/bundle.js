@@ -29315,9 +29315,16 @@
 	          currentContent = _state.currentContent;
 	
 	
-	      if (selectedContent !== '') document.getElementById(selectedContent + 'Content').classList.remove('resetWindow');
+	      if (selectedContent !== '') {
+	        document.getElementById(selectedContent + 'Content').classList.remove('resetWindow');
+	      } // else remove animateTab from mainTab
 	      this.setState({ selectedContent: newContent });
 	      document.getElementById(currentContent + 'Content').className += ' animateWindow';
+	      var currentTab = document.getElementById(currentContent + 'Tab');
+	      // slides old tab back in
+	      currentTab.className += ' resetTab';
+	      currentTab.classList.remove('animateTab');
+	
 	      setTimeout(function () {
 	        var currentWrapper = document.getElementById(currentContent + 'Wrapper');
 	        currentWrapper.className += ' hiddenWrapper';
@@ -29341,6 +29348,9 @@
 	      var currentWrapper = document.getElementById(selectedContent + 'Wrapper');
 	      currentWrapper.classList.remove('hiddenWrapper');
 	      document.getElementById(selectedContent + 'Content').className += ' resetWindow';
+	      var selectedTab = document.getElementById(selectedContent + 'Tab');
+	      selectedTab.className += ' animateTab';
+	      selectedTab.classList.remove('resetTab');
 	
 	      if (selectedContent === 'projects') currentWrapper.style.overflow = 'visible';
 	      this.setState({ currentContent: selectedContent });
@@ -29468,7 +29478,7 @@
 	        }),
 	        _react2.default.createElement(
 	          'div',
-	          { id: 'mainTab', className: 'tab',
+	          { id: 'mainTab', className: 'tab defaultTab',
 	            onClick: currentContent !== 'main' ? function () {
 	              return updateContent('main');
 	            } : null,

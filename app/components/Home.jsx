@@ -25,9 +25,16 @@ class Home extends Component {
   updateContent(newContent){
     const { selectedContent, currentContent } = this.state;
 
-    if (selectedContent !== '') document.getElementById(selectedContent + 'Content').classList.remove('resetWindow');
+    if (selectedContent !== '') {
+      document.getElementById(selectedContent + 'Content').classList.remove('resetWindow');
+    } // else remove animateTab from mainTab
     this.setState({selectedContent: newContent});
     document.getElementById(currentContent + 'Content').className += ' animateWindow';
+    let currentTab = document.getElementById(currentContent + 'Tab');
+    // slides old tab back in
+    currentTab.className += ' resetTab';
+    currentTab.classList.remove('animateTab');
+
     setTimeout(() => {
       let currentWrapper = document.getElementById(currentContent + 'Wrapper');
       currentWrapper.className += ' hiddenWrapper';
@@ -46,6 +53,9 @@ class Home extends Component {
     let currentWrapper = document.getElementById(selectedContent + 'Wrapper');
     currentWrapper.classList.remove('hiddenWrapper');
     document.getElementById(selectedContent + 'Content').className += ' resetWindow';
+    let selectedTab = document.getElementById(selectedContent + 'Tab')
+    selectedTab.className += ' animateTab';
+    selectedTab.classList.remove('resetTab');
 
     if (selectedContent === 'projects') currentWrapper.style.overflow = 'visible';
     this.setState({currentContent: selectedContent});
