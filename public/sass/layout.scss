@@ -27,8 +27,8 @@ html, body {
 #sidebar {
   display: inline-block;
   width: 20%;
-  // border: .01em solid white;
-  box-shadow: .25em .25em .5em #333333;
+  border-right: .01em solid #333333;
+  // box-shadow: .25em .25em .5em #333333;
   text-align: center;
   height: 100vh;
   // this padding value seems to also affect homeContainer, unsure why
@@ -40,9 +40,10 @@ html, body {
   line-height: 6em;
   vertical-align: middle;
   transition-property: background-color, border-radius, color;
-  transition-duration: 0.5s;
+  transition-duration: 0.3s;
   transition-timing-function: ease-out;
   position: relative;
+  cursor: pointer;
   z-index: 1;
 }
 
@@ -142,7 +143,8 @@ html, body {
 }
 
 #storyTag {
-  color: grey;
+  cursor: pointer;
+  // text-decoration: underline;
 }
 
 #storyTag:hover {
@@ -157,7 +159,7 @@ html, body {
 .icon {
   border-radius: 20em;
   width: 20%;
-  transition-duration: .8s;
+  transition-duration: .3s;
   margin: 0 0.5em;
 }
 
@@ -177,7 +179,7 @@ html, body {
   display: inline-block;
   padding: 1em;
   border: solid white 1px;
-  transition-duration: .8s;
+  transition-duration: .3s;
 }
 
 #resumeLink:hover {

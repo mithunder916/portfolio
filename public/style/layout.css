@@ -20,7 +20,7 @@
     margin: 0.5em 0; }
   .projectsContainer .miniIcons {
     display: inline-block;
-    background-color: #1F1E1C;
+    background-color: #3B3935;
     border-radius: 3em;
     width: 18%;
     padding: .2em .3em 0 .3em; }
@@ -29,7 +29,7 @@
     .projectsContainer a img {
       border-radius: 5em;
       width: 25%;
-      transition-duration: 1s;
+      transition-duration: .3s;
       margin-top: 0; }
     .projectsContainer a img:hover {
       background-color: gold; }
@@ -55,7 +55,7 @@ html, body {
 #sidebar {
   display: inline-block;
   width: 20%;
-  box-shadow: .25em .25em .5em #333333;
+  border-right: .01em solid #333333;
   text-align: center;
   height: 100vh;
   padding: 2em 0; }
@@ -64,9 +64,10 @@ html, body {
   line-height: 6em;
   vertical-align: middle;
   transition-property: background-color, border-radius, color;
-  transition-duration: 0.5s;
+  transition-duration: 0.3s;
   transition-timing-function: ease-out;
   position: relative;
+  cursor: pointer;
   z-index: 1; }
 
 .tab:hover {
@@ -144,7 +145,7 @@ html, body {
   color: white; }
 
 #storyTag {
-  color: grey; }
+  cursor: pointer; }
 
 #storyTag:hover {
   color: gold; }
@@ -155,7 +156,7 @@ html, body {
 .icon {
   border-radius: 20em;
   width: 20%;
-  transition-duration: .8s;
+  transition-duration: .3s;
   margin: 0 0.5em; }
 
 .sideIcon {
@@ -170,7 +171,7 @@ html, body {
   display: inline-block;
   padding: 1em;
   border: solid white 1px;
-  transition-duration: .8s; }
+  transition-duration: .3s; }
 
 #resumeLink:hover #resume {
   color: black;

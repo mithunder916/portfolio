@@ -29317,11 +29317,8 @@
 	      selectedTab.className += ' animateTab';
 	      selectedTab.classList.remove('resetTab');
 	
-	      // setTimeout(() => {
-	      // document.getElementById(selectedContent + 'Symbol').style.visibility = 'visible';
 	      document.getElementById(selectedContent + 'Symbol').className += ' activeSymbol';
 	      document.getElementById(selectedContent + 'Symbol').classList.remove('hiddenSymbol');
-	      // }, 300);
 	
 	      if (selectedContent === 'projects') currentWrapper.style.overflow = 'visible';
 	      this.setState({ currentContent: selectedContent });
@@ -29787,13 +29784,8 @@
 	            _react2.default.createElement(
 	              'p',
 	              { id: 'story',
-	                style: { display: 'none' },
-	                onMouseEnter: function onMouseEnter(e) {
-	                  return _this2.dimText(e);
-	                },
-	                onMouseLeave: function onMouseLeave(e) {
-	                  return _this2.dimText(e);
-	                } },
+	                style: { display: 'none' }
+	              },
 	              'Before becoming a software engineer, I taught LSAT Prep and English. I spend most of my free making music, whether that\'s playing the guitar or drums, mixing and recording tracks, or working on music-tech based sideprojects, like Saturn.'
 	            )
 	          )

@@ -62,11 +62,8 @@ class Home extends Component {
     selectedTab.className += ' animateTab';
     selectedTab.classList.remove('resetTab');
 
-    // setTimeout(() => {
-      // document.getElementById(selectedContent + 'Symbol').style.visibility = 'visible';
-      document.getElementById(selectedContent + 'Symbol').className += ' activeSymbol';
-      document.getElementById(selectedContent + 'Symbol').classList.remove('hiddenSymbol')
-    // }, 300);
+    document.getElementById(selectedContent + 'Symbol').className += ' activeSymbol';
+    document.getElementById(selectedContent + 'Symbol').classList.remove('hiddenSymbol')
 
     if (selectedContent === 'projects') currentWrapper.style.overflow = 'visible';
     this.setState({currentContent: selectedContent});

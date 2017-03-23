@@ -69,8 +69,7 @@ export default class Main extends Component {
             <p id='storyTag' onClick={(e) => this.showStory(e)}>What's your story?</p>
             <p id='story'
             style={{display:'none'}}
-            onMouseEnter={(e) => this.dimText(e)}
-            onMouseLeave={(e) => this.dimText(e)}>
+            >
               Before becoming a software engineer, I taught LSAT Prep and English. I spend most of my free making music, whether that's playing the guitar or drums, mixing and recording tracks, or working on music-tech based sideprojects, like Saturn.
             </p>
           </div>
