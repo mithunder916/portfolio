@@ -10,40 +10,42 @@
 
 // makes html body take up full size of browser window
 html, body {
-  height: 100vh;
+  // height: 100vh;
   margin: 0;
 }
 
 #origin,
 #origin > div {
-  height: 100vh;
+  // height: 100vh;
   background-color: black;
 }
 
 #homeContainer {
-  height: 100vh;
+  // height: 100vh;
 }
 
 #sidebar {
   display: inline-block;
   width: 20%;
-  border-right: .01em solid #333333;
+  // position: fixed;
+  // border-right: .01em solid #333333;
   // box-shadow: .25em .25em .5em #333333;
   text-align: center;
-  height: 100vh;
+  // height: 100vh;
   // this padding value seems to also affect homeContainer, unsure why
   padding: 2em 0;
 }
 
 .tab {
   // line-height also centers text
-  line-height: 6em;
+  line-height: 3em;
   vertical-align: middle;
   transition-property: background-color, border-radius, color;
   transition-duration: 0.3s;
   transition-timing-function: ease-out;
   position: relative;
   cursor: pointer;
+  border: .01em solid #333333;
   z-index: 1;
 }
 
@@ -66,6 +68,7 @@ html, body {
   z-index: 0;
   right: -130%;
   bottom: 1.3em;
+  width: 100%;
 }
 
 .hiddenSymbol {
@@ -73,7 +76,6 @@ html, body {
   z-index: 0;
   bottom: 1.3em;
   animation: slideSymbol 0.3s forwards;
-  // visibility: hidden;
 }
 
 .activeSymbol {
@@ -81,7 +83,6 @@ html, body {
   z-index: 0;
   bottom: 1.3em;
   animation: slideSymbolBack 0.3s forwards;
-  // visibility: visible;
 }
 
 #main {
@@ -89,12 +90,13 @@ html, body {
   vertical-align: top;
   width: 80%;
   height: 100vh;
+  border-left: .01em solid #333333;
 }
 
 // wrapper and content classes are used for each window
 .wrapper {
   height: 100%;
-  max-height: 100vh;
+  // max-height: 100vh;
   overflow: hidden;
   position: relative;
 }
@@ -158,14 +160,14 @@ html, body {
 // images outside of projects page
 .icon {
   border-radius: 20em;
-  width: 20%;
+  width: 10%;
   transition-duration: .3s;
   margin: 0 0.5em;
 }
 
 .sideIcon {
-  // border-radius: 20em;
-  width: 20%;
+  border-radius: 20em;
+  width: 15%;
   transition-duration: .8s;
   margin: 0 0.5em;
 }
@@ -220,9 +222,12 @@ html, body {
   background-color: #639AA9;
 }
 
+#musicRows {
+  margin-top: 5em;
+}
 .musicRow {
   margin: 3em 1.5em;
-  height: 40vh;
+  // height: 40vh;
 
   iframe {
     margin-left: 4em;
@@ -231,7 +236,7 @@ html, body {
   a {
     img {
       vertical-align: middle;
-      margin: auto 0;
+      // margin: auto 0;
     }
   }
 }
@@ -240,8 +245,8 @@ html, body {
   display: inline-block;
   vertical-align: middle;
   border: 0;
-  width: 60%;
-  height: 100%;
+  width: 50%;
+  // height: 90%;
 }
 
 // Animations
@@ -293,6 +298,7 @@ html, body {
 
 .defaultSymbol {
   right: 0%;
+  top: -8%;
 }
 
 @keyframes slideTabBack {

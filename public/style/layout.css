@@ -41,33 +41,27 @@
   color: white; }
 
 html, body {
-  height: 100vh;
   margin: 0; }
 
 #origin,
 #origin > div {
-  height: 100vh;
   background-color: black; }
-
-#homeContainer {
-  height: 100vh; }
 
 #sidebar {
   display: inline-block;
   width: 20%;
-  border-right: .01em solid #333333;
   text-align: center;
-  height: 100vh;
   padding: 2em 0; }
 
 .tab {
-  line-height: 6em;
+  line-height: 3em;
   vertical-align: middle;
   transition-property: background-color, border-radius, color;
   transition-duration: 0.3s;
   transition-timing-function: ease-out;
   position: relative;
   cursor: pointer;
+  border: .01em solid #333333;
   z-index: 1; }
 
 .tab:hover {
@@ -85,7 +79,8 @@ html, body {
   position: absolute;
   z-index: 0;
   right: -130%;
-  bottom: 1.3em; }
+  bottom: 1.3em;
+  width: 100%; }
 
 .hiddenSymbol {
   position: absolute;
@@ -103,11 +98,11 @@ html, body {
   display: inline-block;
   vertical-align: top;
   width: 80%;
-  height: 100vh; }
+  height: 100vh;
+  border-left: .01em solid #333333; }
 
 .wrapper {
   height: 100%;
-  max-height: 100vh;
   overflow: hidden;
   position: relative; }
 
@@ -155,12 +150,13 @@ html, body {
 
 .icon {
   border-radius: 20em;
-  width: 20%;
+  width: 10%;
   transition-duration: .3s;
   margin: 0 0.5em; }
 
 .sideIcon {
-  width: 20%;
+  border-radius: 20em;
+  width: 15%;
   transition-duration: .8s;
   margin: 0 0.5em; }
 
@@ -199,21 +195,21 @@ html, body {
 .bandcamp:hover {
   background-color: #639AA9; }
 
+#musicRows {
+  margin-top: 5em; }
+
 .musicRow {
-  margin: 3em 1.5em;
-  height: 40vh; }
+  margin: 3em 1.5em; }
   .musicRow iframe {
     margin-left: 4em; }
   .musicRow a img {
-    vertical-align: middle;
-    margin: auto 0; }
+    vertical-align: middle; }
 
 .musicPlayer {
   display: inline-block;
   vertical-align: middle;
   border: 0;
-  width: 60%;
-  height: 100%; }
+  width: 50%; }
 
 @keyframes slide {
   0% {
@@ -246,7 +242,8 @@ html, body {
   left: -100%; }
 
 .defaultSymbol {
-  right: 0%; }
+  right: 0%;
+  top: -8%; }
 
 @keyframes slideTabBack {
   0% {

@@ -11,6 +11,7 @@ export default class Contact extends Component {
             <div id='resume'>Download Resume</div>
           </a>
           <div id='contactIcons'>
+
             <a href="https://www.linkedin.com/in/mithun-s">
               <img className='icon linkedIn' src="public/images/linkedin.png" />
             </a>

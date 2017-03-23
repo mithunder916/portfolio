@@ -10,8 +10,7 @@ class Home extends Component {
 
     let samples = [
       ['kick', 'hihat', 'snare', 'hihat2'],
-      ['C', 'D', 'E', 'G'],
-      ['A', 'B', 'C#', 'E']
+      ['Imaj7', 'iimin7', 'iiimin7', 'IVmaj7']
     ]
 
     this.state = {

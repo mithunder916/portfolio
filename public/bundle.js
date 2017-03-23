@@ -29252,7 +29252,7 @@
 	
 	    var _this = _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).call(this, props));
 	
-	    var samples = [['kick', 'hihat', 'snare', 'hihat2'], ['C', 'D', 'E', 'G'], ['A', 'B', 'C#', 'E']];
+	    var samples = [['kick', 'hihat', 'snare', 'hihat2'], ['Imaj7', 'iimin7', 'iiimin7', 'IVmaj7']];
 	
 	    _this.state = {
 	      currentContent: 'main',
@@ -29432,7 +29432,6 @@
 	          samples = _props.samples,
 	          currentContent = _props.currentContent;
 	
-	      console.log(samples);
 	      return _react2.default.createElement(
 	        'div',
 	        { id: 'sidebar', className: 'wrapper' },
@@ -29487,11 +29486,7 @@
 	              } },
 	            'Projects'
 	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'symbol', id: 'projectsSymbol' },
-	            _react2.default.createElement('img', { className: 'sideIcon', src: 'public/images/projects.png' })
-	          )
+	          _react2.default.createElement('div', { className: 'symbol', id: 'projectsSymbol' })
 	        ),
 	        _react2.default.createElement(
 	          'div',
@@ -29511,11 +29506,7 @@
 	              } },
 	            'Contact'
 	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'symbol', id: 'contactSymbol' },
-	            _react2.default.createElement('img', { className: 'sideIcon', src: 'public/images/contact.svg' })
-	          )
+	          _react2.default.createElement('div', { className: 'symbol', id: 'contactSymbol' })
 	        ),
 	        _react2.default.createElement(
 	          'div',
@@ -29535,11 +29526,7 @@
 	              } },
 	            'Music'
 	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'symbol', id: 'musicSymbol' },
-	            _react2.default.createElement('img', { className: 'sideIcon', src: 'public/images/record2.png' })
-	          )
+	          _react2.default.createElement('div', { className: 'symbol', id: 'musicSymbol' })
 	        )
 	      );
 	    }
@@ -30188,30 +30175,39 @@
 	          'div',
 	          { id: 'musicContent', className: 'content' },
 	          _react2.default.createElement(
-	            'div',
-	            { className: 'musicRow' },
-	            _react2.default.createElement(
-	              'a',
-	              { href: 'https://soundcloud.com/thesealab' },
-	              _react2.default.createElement('img', { className: 'icon soundcloud', src: 'public/images/soundcloud.png' })
-	            ),
-	            _react2.default.createElement('iframe', { className: 'musicPlayer', src: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/6157478&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&visual=true' })
+	            'p',
+	            null,
+	            'In addition to writing software, my main hobby is playing, writing, and producing music. Here\'s some of my work.'
 	          ),
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'musicRow' },
+	            { id: 'musicRows' },
 	            _react2.default.createElement(
-	              'a',
-	              { href: 'https://sealab.bandcamp.com/' },
-	              _react2.default.createElement('img', { className: 'icon bandcamp', src: 'public/images/bandcamp.png' })
-	            ),
-	            _react2.default.createElement(
-	              'iframe',
-	              { className: 'musicPlayer', src: 'https://bandcamp.com/EmbeddedPlayer/album=611526201/size=large/bgcol=333333/linkcol=e99708/artwork=small/transparent=true/', seamless: true },
+	              'div',
+	              { className: 'musicRow' },
 	              _react2.default.createElement(
 	                'a',
-	                { href: 'http://sealab.bandcamp.com/album/ii' },
-	                'II by Sealab'
+	                { href: 'https://soundcloud.com/thesealab' },
+	                _react2.default.createElement('img', { className: 'icon soundcloud', src: 'public/images/soundcloud.png' })
+	              ),
+	              _react2.default.createElement('iframe', { className: 'musicPlayer', src: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/6157478&color=ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false' })
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'musicRow' },
+	              _react2.default.createElement(
+	                'a',
+	                { href: 'https://sealab.bandcamp.com/' },
+	                _react2.default.createElement('img', { className: 'icon bandcamp', src: 'public/images/bandcamp.png' })
+	              ),
+	              _react2.default.createElement(
+	                'iframe',
+	                { className: 'musicPlayer', src: 'https://bandcamp.com/EmbeddedPlayer/album=611526201/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/artwork=small/transparent=true/', seamless: true },
+	                _react2.default.createElement(
+	                  'a',
+	                  { href: 'http://sealab.bandcamp.com/album/ii' },
+	                  'II by Sealab'
+	                )
 	              )
 	            )
 	          )

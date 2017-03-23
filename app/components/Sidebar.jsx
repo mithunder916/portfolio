@@ -22,7 +22,6 @@ export default class Sidebar extends Component {
 
   render() {
     const { updateContent, samples, currentContent } = this.props;
-    console.log(samples)
     return (
       <div id='sidebar' className='wrapper'>
         {samples && samples.map((sample, i) => (
@@ -58,7 +57,7 @@ export default class Sidebar extends Component {
               Projects
           </div>
           <div className='symbol' id='projectsSymbol'>
-            <img className='sideIcon' src='public/images/projects.png' />
+            {/*<img className='sideIcon' src='public/images/projects.png' />*/}
           </div>
         </div>
         <div className='tabContainer'>
@@ -71,7 +70,7 @@ export default class Sidebar extends Component {
               Contact
           </div>
           <div className='symbol' id='contactSymbol'>
-            <img className='sideIcon' src='public/images/contact.svg' />
+            {/*<img className='sideIcon' src='public/images/contact.svg' />*/}
           </div>
         </div>
         <div className='tabContainer'>
@@ -84,7 +83,7 @@ export default class Sidebar extends Component {
               Music
           </div>
           <div className='symbol' id='musicSymbol'>
-            <img className='sideIcon' src='public/images/record2.png' />
+            {/*<img className='sideIcon' src='public/images/record2.png' />*/}
           </div>
         </div>
       </div>
