@@ -31,7 +31,7 @@ export default class Main extends Component {
           <div id='mainContent' className='content'>
             <div id='intro'>
               <p>
-                Hi, my name is Mithun and I'm a web developer from Brooklyn, NY. I currently work at Fullstack Academy of Code as a teaching fellow and engineering intern.
+                Hi, my name is Mithun Selvaratnam and I'm a web developer from Brooklyn, NY. I currently work at Fullstack Academy of Code as a teaching fellow and engineering intern.
               </p>
               <p>
                 Some of my favorite tools are:

@@ -37,7 +37,7 @@ export default class Projects extends Component {
               </div>
             </div>
             <p className='title'>88 Keys</p>
-            <p className='description'>A gamified music education app aimed at beginners, teaching them piano-playing skills, music theory, and staff notation. Players collect 88 'keys' for completing interactive lecture slides, quizzes, and challenges. Features MIDI support for rhythm-based games.</p>
+            <p className='description'>A gamified music education app that teaches piano-playing, music theory, and staff notation. Players collect 88 'keys' for completing interactive lectures, quizzes, and challenges. Features MIDI support for rhythm-based games.</p>
             <p className='tools'>Built with: React, Redux, Web Audio, teamwork :)</p>
           </div>
           <div className='projectsContainer'>
