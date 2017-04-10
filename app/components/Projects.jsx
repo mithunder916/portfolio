@@ -19,7 +19,7 @@ export default class Projects extends Component {
             </div>
             <p className='title'>Saturn</p>
             <p className='description'>An '80s-themed, in-browser music production suite, consisting of a drum sequencer, customizable synth with MIDI functionality, and recording/exporting .wav files of loops.</p>
-            <p className='tools'>Built with: React, Redux, Tone.js, Firebase</p>
+            <p className='tools'>Built with: React, Redux, Tone.js, Firebase, HTML Canvas</p>
           </div>
           <div className='projectsContainer'>
             <img src="public/images/88keys2.png" />
@@ -38,7 +38,7 @@ export default class Projects extends Component {
             </div>
             <p className='title'>88 Keys</p>
             <p className='description'>A gamified music education app that teaches piano-playing, music theory, and staff notation. Players collect 88 'keys' for completing interactive lectures, quizzes, and challenges. Features MIDI support for rhythm-based games.</p>
-            <p className='tools'>Built with: React, Redux, Web Audio, teamwork :)</p>
+            <p className='tools'>Built with: React, Redux, Web Audio, Agile, teamwork :)</p>
           </div>
           <div className='projectsContainer'>
             <img src="public/images/loopseq.png" />

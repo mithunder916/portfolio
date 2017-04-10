@@ -57,7 +57,6 @@ export default class Sidebar extends Component {
               Projects
           </div>
           <div className='symbol' id='projectsSymbol'>
-            {/*<img className='sideIcon' src='public/images/projects.png' />*/}
           </div>
         </div>
         <div className='tabContainer'>
@@ -70,7 +69,6 @@ export default class Sidebar extends Component {
               Contact
           </div>
           <div className='symbol' id='contactSymbol'>
-            {/*<img className='sideIcon' src='public/images/contact.svg' />*/}
           </div>
         </div>
         <div className='tabContainer'>
@@ -83,7 +81,6 @@ export default class Sidebar extends Component {
               Music
           </div>
           <div className='symbol' id='musicSymbol'>
-            {/*<img className='sideIcon' src='public/images/record2.png' />*/}
           </div>
         </div>
       </div>
